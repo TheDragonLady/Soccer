@@ -11,7 +11,7 @@ public class GoalZone: MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
-        Debug.Log("hey Ijust destroyed a ball I dont know if that's what you wanted to do but I did it");
+        
 
         BallManager.instance.InstantiateBall();
 
