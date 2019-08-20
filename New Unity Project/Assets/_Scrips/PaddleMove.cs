@@ -2,17 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerController
+{
+    PlayerPink,
+    PlayerYellow
+}
 public class PaddleMove : MonoBehaviour
 {
-
+    public PlayerController playerSetting;
     public float speed = 1f;
     public float clampValue;
+    public string axisName;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(playerSetting == PlayerController.PlayerPink)
+        {
+            axisName = "PlayerPink";
+        }
+
+        if (playerSetting == PlayerController.PlayerYellow)
+        {
+            axisName = "PlayerYellow";
+        }
+
     }
 
     // Update is called once per frame
@@ -20,7 +35,7 @@ public class PaddleMove : MonoBehaviour
     {
 
 
-        MovePaddle(Input.GetAxis("Horizontal"));
+        MovePaddle(Input.GetAxis(axisName));
 
     }
 
