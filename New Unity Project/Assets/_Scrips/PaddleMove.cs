@@ -13,7 +13,10 @@ public class PaddleMove : MonoBehaviour
     public float speed = 1f;
     public float clampValue;
     public string axisName;
-
+    public string pinchingAxis;
+ //   private bool punching;
+  //  public float punchPower;
+  //  private 
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +36,17 @@ public class PaddleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         MovePaddle(Input.GetAxis(axisName));
+      //  if (Input.GetKey(KeyCode.Space))
+        {
+      //      punching = true;
+        }
+       // if (punching == true)
+        {
+      //      Punch();
+        }
+
+        //transform.position - new Vector3(Mathf.Clamp(transform.position.x))
 
     }
 
